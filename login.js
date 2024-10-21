@@ -151,10 +151,12 @@ if (debug) {
     }
   } catch {
     await pRetry(login, {
-      onFailedAttempt: err => {
+      onFailedAttempt: async err => {
         console.log(`Attempt ${err.attemptNumber} failed. There are ${err.retriesLeft} retries left.`);
+	await new Promise(resolve => setTimeout(resolve, 1000));
       },
-      retries: 14
+      retries: 0
     });
   }
 }
+
