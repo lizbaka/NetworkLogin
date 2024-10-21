@@ -1,3 +1,13 @@
+# 改进
+
+改进后的脚本可以支持登录指定ip设备，方便实验室服务器的校园网登录。
+
+使用方法：
+
+```sh
+node login.js <username> <password> [ip_address]
+```
+
 # HITsz 校园网登录脚本
 
 ## 前置依赖
